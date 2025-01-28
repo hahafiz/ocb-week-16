@@ -1,6 +1,7 @@
 import Card from "./components/Card";
 import Count from "./components/Count";
 import Counter from "./components/Counter";
+import RegisterForm from "./components/RegisterForm";
 
 // const user = {
 //   name: "Meow",
@@ -104,9 +105,10 @@ function App() {
       {/* {users.map((user) => {
         return <Card user={user} hidden={!user.active} key={user.id} />;
       })} */}
-      {students.map((student) => {
+      {/* {students.map((student) => {
         return <Counter key={student} name={student} />;
-      })}
+        })} */}
+      <RegisterForm />
     </>
   );
 }
