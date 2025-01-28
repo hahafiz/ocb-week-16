@@ -1,13 +1,22 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
+import { useState } from "react";
 
-const RegisterForm = (props) => {
+const RegisterForm = () => {
   // fieldset - component to group inputs
+  const [username, setUsername] = useState("");
 
   return (
     <form>
       <fieldset>
         <label htmlFor="username">Username</label>
-        <input id="username" name="username" />
+        <input
+          id="username"
+          name="username"
+          onChange={(event) => {
+            // console.log(event.target.value);
+            setUsername(event.target.value);
+          }}
+        />
       </fieldset>
       <fieldset>
         <label htmlFor="age">Age</label>
@@ -22,6 +31,6 @@ const RegisterForm = (props) => {
   );
 };
 
-RegisterForm.propTypes = {};
+// RegisterForm.propTypes = {};
 
 export default RegisterForm;
